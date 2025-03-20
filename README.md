@@ -58,8 +58,15 @@ The objective was to identify a pre-trained model suitable for the given task. S
 - Lacked the **Prognosis** class, which was essential for the task.  
 - Successfully handled all other required entity types.  
 
+**4. Combining GLiNER with `bert-base-uncased_clinical-ner`**  
+- Attempted to use GLiNER alongside `bert-base-uncased_clinical-ner` to include the **Prognosis** class.  
+- GLiNER was able to recognize the **Prognosis** entity.  
+- However, GLiNER was highly computationally intensive and could pose challenges during deployment.  
+- Due to these constraints, this approach was avoided.  
+
 #### **Conclusion**  
-Fine-tuning would have been a good option; however, due to the lack of annotated data for the specific classes, the focus remained on selecting a suitable pre-trained model.
+Fine-tuning would have been a good option; however, due to the lack of annotated data for the specific classes, the focus remained on selecting a suitable pre-trained model. While combining GLiNER with `bert-base-uncased_clinical-ner` helped address the missing **Prognosis** class, the high computational cost of GLiNER made it impractical for deployment.
+
 
 ### **Sentiment & Intent Classification**
 #### **Overview**  
